@@ -8,11 +8,14 @@ Nexus Impact AI is a collaborative multi-agent platform designed to help researc
 
 ## 🚀 Vision & Architecture
 
-Nexus Impact AI envisions an ecosystem of 8 specialized workspaces connected by an AI Agents Marketplace:
+Nexus Impact AI envisions an ecosystem of 8 specialized workspaces:
 
-* 🔬 Research Workspace *(MVP - Fully Implemented)*
-* ✍️ Grant Workspace *(MVP - Fully Implemented)*
-* 🌍 Humanitarian Workspace *(MVP - Fully Implemented)*
+#### 🟢 Live (Build Week MVP - Implemented)
+* 🔬 Research Workspace – Multi-agent intelligence for quick data analysis & synthesis
+* 🏗️ Grant Workspace – Automated grant matching & proposal drafting
+* 🌍 Humanitarian Workspace – Rapid crisis response & resource planning tools
+
+#### ⏳ Coming Soon (Roadmap)
 * ⚖️ Human Rights Workspace *(Roadmap / Coming Soon)*
 * 🩺 Public Health Workspace *(Roadmap / Coming Soon)*
 * 👩‍⚕️ Women's Health Workspace *(Roadmap / Coming Soon)*
