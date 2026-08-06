@@ -104,3 +104,23 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 - [Cookie Policy](./docs/COOKIES.md)
+## 💰 Business & Pricing Model (Roadmap)
+
+Nexus Impact AI utilizes a tiered subscription model engineered for mission-driven teams, NGOs, and research organizations:
+
+### 🟢 Free / Impact Tier ($0/month)
+* Designed for small community projects, students, and independent researchers.
+* Access to 3 Live Workspaces (Research, Grant, Humanitarian).
+* Standard agent response speed with capped monthly AI token queries.
+
+### 🔵 Pro Tier ($29/month per seat)
+* Designed for active non-profit teams, grant writers, and researchers.
+* Unlimited agent queries & priority multi-agent processing.
+* Full access to upcoming workspaces (Human Rights, Public Health, Women's Health).
+* Document export capabilities (PDF/Word grant drafts & research reports).
+
+### 🟣 Enterprise & Institutional Tier (Custom Pricing)
+* Tailored for international NGOs, government agencies, and research institutions.
+* Custom Knowledge Base Hub integration with private document databases.
+* Dedicated agent deployment, custom API limits, and high-security compliance.
+* Multi-user organization management & team collaboration controls.
