@@ -41,3 +41,21 @@ Upload Research PDF ➡️ Extract Evidence (Research Agent) ➡️ Generate Pro
 * Frontend: Next.js, React, Tailwind CSS
 * Backend: Supabase, TypeScript, Node.js
 * AI Engine: GPT-5.6 / Codex / Multi-Agent Orchestration
+[8/6/2026 11:12 AM] Dr.Fetle: git add README.md
+git commit -m "Fix typo in README"
+git push origin main
+[8/6/2026 11:19 AM] Dr.Fetle: ---
+
+### GPT-5.6 Usage
+
+GPT-5.6 is used in the Research Workspace to analyze research topics, summarize evidence, key findings, and generate actionable recommendations for NGOs, researchers, and humanitarian organizations.
+
+### Codex Usage
+
+OpenAI Codex was used during development to:
+
+* Generate React and Next.js components
+* Create TypeScript API route scaffolding
+* Improve Tailwind CSS layouts
+* Debug application issues
+* Refine the multi-agent workspace architecture
