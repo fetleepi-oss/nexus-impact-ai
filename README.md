@@ -28,10 +28,10 @@ Upload Research PDF ➡️ Extract Evidence (Research Agent) ➡️ Generate Pro
 
 ---
 
-## ⚡️ Technical Highlights
+## ⚡️ Technical Highlights & Build Week Stack
 
-* Architecture: Designed to run via OpenAI's Responses API targeting long-context reasoning models (GPT-5.6 / Codex).
-* Multi-Agent Orchestration: Outputs from specialized research agents directly feed into grant generation and project planning workflows.
+* GPT-5.6 Multi-Agent Engine: Powers the Research Workspace to generate structured research summaries, evidence analysis, and decision support frameworks via the OpenAI Responses API architecture.
+* Codex / AI Code Assistance: Leveraged during development to accelerate Next.js/React component generation, API route creation, and state management.
 * Structured Outputs: Guarantees standard formats for Logframes, Budgets, and Risk Analysis matrices.
 
 ---
@@ -39,5 +39,5 @@ Upload Research PDF ➡️ Extract Evidence (Research Agent) ➡️ Generate Pro
 ## 💻 Tech Stack
 
 * Frontend: Next.js, React, Tailwind CSS
-* Backend & Database: Supabase, TypeScript, Node.js
-* AI & Workflow: OpenAI Responses API Architecture / Multi-Agent Systems
+* Backend: Supabase, TypeScript, Node.js
+* AI Engine: GPT-5.6 / Codex / Multi-Agent Orchestration
