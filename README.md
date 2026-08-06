@@ -87,5 +87,20 @@ OpenAI Codex was used during development to:
 * Refine the multi-agent workspace architecture
 ## 📜 Documentation & Policies
 
+Nexus Impact AI includes supporting documentation for responsible AI usage and deployment.
+
 - [Privacy Policy](./docs/PRIVACY.md)
 - [Terms of Service](./docs/TERMS.md)
+
+### Environment Variables
+
+Create a `.env.local` file based on `.env.example`.
+
+Required variables:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+- [Cookie Policy](./docs/COOKIES.md)
