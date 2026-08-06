@@ -85,3 +85,7 @@ OpenAI Codex was used during development to:
 * Improve Tailwind CSS layouts
 * Debug application issues
 * Refine the multi-agent workspace architecture
+## 📜 Documentation & Policies
+
+- [Privacy Policy](./docs/PRIVACY.md)
+- [Terms of Service](./docs/TERMS.md)
