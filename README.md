@@ -51,6 +51,29 @@ git push origin main
 GPT-5.6 is used in the Research Workspace to analyze research topics, summarize evidence, key findings, and generate actionable recommendations for NGOs, researchers, and humanitarian organizations.
 
 ### Codex Usage
+## 🌐 Deploy on Vercel
+
+1. Fork or clone this repository
+2. Connect the repository to **Vercel**
+3. Add the required environment variables
+4. Deploy
+
+### Required Environment Variables
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open **http://localhost:3000**.
 
 OpenAI Codex was used during development to:
 
