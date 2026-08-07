@@ -1,21 +1,52 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {
   try {
-    const { workspace, prompt } = await req.json();
+    const { workspace, prompt } = await req.json()
 
-    let mockResponse = "";
+    let mockResponse = ''
 
-    if (workspace === "research") {
-      mockResponse = [Research Agent Output - GPT-5.6 Engine]\n\nAnalysis Summary for: "${prompt}"\n\n1. Key Findings: Extracted evidence supports primary hypothesis.\n2. Research Gaps: Limited quantitative longitudinal data.\n3. Citations Generated: Standard APA format prepared.;
-    } else if (workspace === "grant") {
-      mockResponse = [Grant Agent Output - GPT-5.6 Engine]\n\nProposal Framework for: "${prompt}"\n\n• Project Goal: Strengthen local resilience\n• Expected Outcome: 40% increase in capacity\n• Estimated Budget: $150,000 USD\n• Logframe Matrix: Generated successfully.;
+    if (workspace === 'research') {
+      mockResponse = `
+Research Agent Output - GPT-5.6 Engine
+
+Analysis Summary for: "${prompt}"
+
+1. Key Findings: Extracted evidence supports the primary hypothesis.
+2. Research Gaps: Limited quantitative longitudinal data available.
+3. Citations Generated: Standard APA-style references prepared.
+      `
+    } else if (workspace === 'grant') {
+      mockResponse = `
+Grant Agent Output - GPT-5.6 Engine
+
+Proposal Framework for: "${prompt}"
+
+• Project Goal: Strengthen local resilience.
+• Expected Outcome: 40% increase in community capacity.
+• Estimated Budget: $150,000 USD.
+• Logframe Matrix: Generated successfully.
+      `
     } else {
-      mockResponse = [Humanitarian Agent Output - GPT-5.6 Engine]\n\nNeeds Assessment Report:\n\n• Situation Overview: Rapid response framework active for "${prompt}".\n• M&E Indicators: 5 key performance metrics configured.\n• Risk Analysis: Severity level 2 (Mitigation planned).;
+      mockResponse = `
+Humanitarian Agent Output - GPT-5.6 Engine
+
+Response Plan for: "${prompt}"
+
+• Situation Analysis: Priority humanitarian needs identified.
+• Target Population: Vulnerable rural households.
+• Timeline: 12-week phased implementation.
+• Monitoring Plan: Weekly field reporting and risk tracking.
+      `
     }
 
-    return NextResponse.json({ result: mockResponse });
+    return NextResponse.json({ result: mockResponse.trim() })
   } catch (error) {
-    return NextResponse.json({ error: "Agent processing failed" }, { status: 500 });
+    console.error(error)
+
+    return NextResponse.json(
+      { error: 'Failed to generate response' },
+      { status: 500 }
+    )
   }
 }
