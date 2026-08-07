@@ -1,36 +1,28 @@
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white p-8">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">
-          Nexus Impact AI 🌍🤖
-        </h1>
+    <main className="min-h-screen p-8">
+      <h1 className="text-4xl font-bold mb-4">
+        Nexus Impact AI 🌍🤖
+      </h1>
 
-        <p className="text-lg text-slate-300 mb-8">
-          The AI Operating System for Impact Organizations
-        </p>
+      <p className="text-lg mb-8">
+        The AI Operating System for Impact Organizations
+      </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-            <h2 className="text-xl font-semibold mb-2">🔬 Research Workspace</h2>
-            <p className="text-slate-400">
-              Generate research summaries, evidence analysis, and recommendations.
-            </p>
-          </div>
+      <div className="grid gap-4 md:grid-cols-3">
+        <div className="border rounded-lg p-4">
+          <h2 className="font-semibold">🔬 Research Workspace</h2>
+          <p>Analyze research topics and generate evidence summaries.</p>
+        </div>
 
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-            <h2 className="text-xl font-semibold mb-2">✍️ Grant Workspace</h2>
-            <p className="text-slate-400">
-              Draft proposals, objectives, budgets, and monitoring frameworks.
-            </p>
-          </div>
+        <div className="border rounded-lg p-4">
+          <h2 className="font-semibold">✍️ Grant Workspace</h2>
+          <p>Create grant proposals, budgets, and monitoring frameworks.</p>
+        </div>
 
-          <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-            <h2 className="text-xl font-semibold mb-2">🌍 Humanitarian Workspace</h2>
-            <p className="text-slate-400">
-              Create needs assessments, response plans, and implementation timelines.
-            </p>
-          </div>
+        <div className="border rounded-lg p-4">
+          <h2 className="font-semibold">🌍 Humanitarian Workspace</h2>
+          <p>Build response plans, needs assessments, and implementation timelines.</p>
         </div>
       </div>
     </main>
