@@ -1,9 +1,8 @@
-import './globals.css';
-import type { Metadata } from 'next';
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'Nexus Impact AI',
-  description: 'AI Operating System for Impact Organizations',
+export const metadata = {
+  title: "Nexus Impact AI",
+  description: "AI Operating System for Impact Organizations",
 };
 
 export default function RootLayout({
