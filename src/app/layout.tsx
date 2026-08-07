@@ -1,18 +1,19 @@
-import './globals.css'
+import './globals.css';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Nexus Impact AI',
-  description: 'Nexus Impact AI Application',
-}
+  description: 'AI Operating System for Impact Organizations',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
-  )
+  );
 }
