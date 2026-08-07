@@ -1,3 +1,5 @@
+import './globals.css'
+
 export const metadata = {
   title: 'Nexus Impact AI',
   description: 'Nexus Impact AI Application',
