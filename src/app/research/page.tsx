@@ -6,8 +6,7 @@ export default function ResearchPage() {
       <div style={{ margin: '1rem 0' }}>
         <h3>Upload document</h3>
         <input type="file" accept=".pdf" />
-      </div>
-
+      </di
       <p>OR</p>
 
       <div style={{ margin: '1rem 0' }}>
