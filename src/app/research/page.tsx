@@ -1,62 +1,56 @@
-
-export default function ResearchPage() {
+export default function HomePage() {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>Research Workspace</h1>
+    <main className="min-h-screen bg-gray-50 p-8">
+      <div className="mx-auto max-w-4xl">
+        <h1 className="text-4xl font-bold text-gray-900">
+          Nexus Impact AI
+        </h1>
 
-      <div style={{ margin: '1rem 0' }}>
-        <h3>Upload document</h3>
-        <input type="file" accept=".pdf" />
-      </div>
+        <p className="mt-4 text-lg text-gray-600">
+          Multi-agent AI workspace for research, grant writing, and
+          humanitarian planning.
+        </p>
 
-      <p>OR</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="rounded-xl border bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">
+              🔬 Research Agent
+            </h2>
 
-      <div style={{ margin: '1rem 0' }}>
-        <h3>Enter research question</h3>
-        <input
-          type="text"
-          placeholder="Enter your research question..."
-          style={{
-            width: '100%',
-            padding: '0.5rem',
-            boxSizing: 'border-box',
-          }}
-        />
-      </div>
+            <p className="mt-2 text-sm text-gray-600">
+              Generate structured research summaries and evidence analysis.
+            </p>
 
-      <button
-        type="button"
-        style={{
-          padding: '0.5rem 1rem',
-          cursor: 'pointer',
-        }}
-      >
-        Analyze
-      </button>
+            <a
+              href="/research"
+              className="mt-4 inline-block rounded-lg bg-black px-4 py-2 text-sm text-white"
+            >
+              Open Research
+            </a>
+          </div>
 
-      <hr style={{ margin: '2rem 0' }} />
+          <div className="rounded-xl border bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">
+              ✍️ Grant Agent
+            </h2>
 
-      <section>
-        <h3>Research Summary</h3>
-        <h3>Key Findings</h3>
-        <h3>Evidence</h3>
-        <h3>Research Gaps</h3>
-        <h3>Recommendations</h3>
-      </section>
+            <p className="mt-2 text-sm text-gray-600">
+              Convert research findings into funding proposals and project
+              plans.
+            </p>
+          </div>
 
-      <div style={{ marginTop: '2rem' }}>
-        <button
-          type="button"
-          style={{
-            padding: '0.7rem 1.2rem',
-            backgroundColor: '#0070f3',
-            color: 'white',
-            border: 'none',
-            cursor: 'pointer',
-          }}
-        >
-          Send to Grant Workspace
-        </button>
+          <div className="rounded-xl border bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">
+              🌍 Humanitarian Agent
+            </h2>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Create needs assessments, response plans, and monitoring
+              frameworks.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );
