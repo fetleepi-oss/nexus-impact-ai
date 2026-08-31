@@ -1,6 +1,6 @@
 export default function ResearchPage() {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+   <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Research Workspace</h1>
       
       <div style={{ margin: '1rem 0' }}>
