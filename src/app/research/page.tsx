@@ -33,5 +33,4 @@ export default function ResearchPage() {
         </button>
       </div>
     </main>
-  );
 }
