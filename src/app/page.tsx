@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="max-w-4xl">
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
             Nexus Impact AI
@@ -30,14 +30,14 @@ export default function HomePage() {
 
             <a
               href="/grants"
-              className="rounded-xl border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-900 hover:bg-slate-50"
             >
               Grant Workspace
             </a>
 
             <a
               href="/humanitarian"
-              className="rounded-xl border border-slate-300 px-6 py-3 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-900 hover:bg-slate-50"
             >
               Humanitarian Workspace
             </a>
@@ -82,13 +82,15 @@ function WorkspaceCard({
       href={href}
       className="block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
-      <h2 className="text-xl font-semibold">{title}</h2>
+      <h2 className="text-xl font-semibold text-slate-900">
+        {title}
+      </h2>
 
       <p className="mt-3 leading-7 text-slate-600">
         {description}
       </p>
 
-      <span className="mt-6 inline-block text-sm font-semibold">
+      <span className="mt-6 inline-block text-sm font-semibold text-slate-900">
         Open workspace →
       </span>
     </a>
