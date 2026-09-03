@@ -15,9 +15,9 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-            An AI operating system for impact organizations, connecting
+            The AI operating system for impact organizations, connecting
             research, grant development, and humanitarian planning in one
-            workspace.
+            intelligent workspace.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -84,7 +84,9 @@ function WorkspaceCard({
     >
       <h2 className="text-xl font-semibold text-slate-900">{title}</h2>
 
-      <p className="mt-3 leading-7 text-slate-600">{description}</p>
+      <p className="mt-3 leading-7 text-slate-600">
+        {description}
+      </p>
 
       <span className="mt-6 inline-block text-sm font-semibold text-slate-900">
         Open workspace →
