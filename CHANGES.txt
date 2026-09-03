@@ -1,0 +1,108 @@
+NEXUS IMPACT AI — REDESIGN CHANGE SUMMARY
+==========================================
+
+HOW TO APPLY
+------------
+1. Unzip this alongside (or over) your existing repo checkout.
+2. Copy everything except node_modules/.git/.next into your project
+   (those are excluded from this zip already).
+3. Run: npm install
+4. Run: npm run build   (this will succeed on Vercel/any machine with
+   internet access to fonts.googleapis.com — it was only blocked in my
+   sandboxed environment, which has an allowlist that doesn't include
+   Google Fonts)
+5. Run: npm run lint && npm run typecheck   (both pass clean)
+6. Commit and push — Vercel will redeploy automatically if connected.
+
+NEW CONFIG FILES (previously missing from the repo)
+-----------------------------------------------------
+tailwind.config.js       - Tailwind never had a config; custom utility
+                            classes already used in the old Grants page
+                            (bg-primary, text-muted-foreground, etc.)
+                            were likely rendering as no-ops in production.
+postcss.config.js        - Required for Tailwind to process at all.
+tsconfig.json             - Added the "@/*" path alias used by every new
+                            component import.
+next.config.js           - Adds permanent redirects: /research, /grants,
+                            /humanitarian -> their new /dashboard/* homes,
+                            so no old links break.
+.eslintrc.json            - No lint config existed; added the standard
+                            Next.js config.
+
+DESIGN SYSTEM (all new)
+------------------------
+src/lib/utils.ts
+src/components/ui/{button,card,input,textarea,badge,alert,skeleton}.tsx
+src/components/empty-state.tsx
+src/components/ai-response-panel.tsx
+src/components/workspace-card.tsx
+
+MARKETING SITE
+---------------
+src/app/page.tsx                 - MODIFIED: full landing page rewrite
+src/app/features/page.tsx        - NEW
+src/app/pricing/page.tsx         - NEW (honest "early access", no invented tiers)
+src/app/about/page.tsx           - NEW (no invented team/company facts)
+src/app/login/page.tsx           - NEW (honest "not connected yet", no fake auth)
+src/app/signup/page.tsx          - NEW (honest "not connected yet", no fake auth)
+src/app/privacy/page.tsx         - NEW (renders existing docs/PRIVACY.md)
+src/app/terms/page.tsx           - NEW (renders existing docs/TERMS.md)
+src/app/cookies/page.tsx         - NEW (renders existing docs/COOKIES.md)
+src/components/marketing/{site-header,site-footer,markdown-doc}.tsx - NEW
+
+DASHBOARD APP SHELL (all new)
+-------------------------------
+src/app/dashboard/layout.tsx
+src/app/dashboard/page.tsx                    - overview, honest empty states
+src/components/dashboard/{sidebar,shell,coming-soon-workspace}.tsx
+
+WORKSPACES — MOVED, NOT REBUILT
+---------------------------------
+src/app/research/page.tsx      -> src/app/dashboard/research/page.tsx
+src/app/grants/page.tsx        -> src/app/dashboard/grants/page.tsx
+src/app/humanitarian/page.tsx  -> src/app/dashboard/humanitarian/page.tsx
+  All three call the exact same /api/agent route with the exact same
+  request payloads and prompt text as before. Only the surrounding UI
+  changed. api/agent/route.ts was NOT modified (per your instruction).
+
+COMING SOON WORKSPACES (all new, clearly labeled, no fake functionality)
+---------------------------------------------------------------------------
+src/app/dashboard/public-health/page.tsx
+src/app/dashboard/human-rights/page.tsx
+src/app/dashboard/womens-health/page.tsx
+src/app/dashboard/construction/page.tsx
+src/app/dashboard/knowledge/page.tsx
+
+PROJECTS & SETTINGS (all new, honest UI shells)
+--------------------------------------------------
+src/app/dashboard/projects/page.tsx   - empty state, no fake project data
+src/app/dashboard/settings/page.tsx   - 4 tabs, fields disabled with a
+                                         clear "not connected yet" notice
+
+UNCHANGED / PRESERVED
+------------------------
+- src/app/api/agent/route.ts  (not touched)
+- All environment variable names (OPENAI_API_KEY, the two Supabase
+  placeholders, NEXT_PUBLIC_APP_NAME/URL)
+- vercel.json
+- README.md, LICENSE, docs/*.md content
+
+KNOWN GAPS CARRIED FORWARD (not fixed this pass, per your choices)
+----------------------------------------------------------------------
+- No real authentication (Supabase was never wired up in the original
+  repo — only unused env var placeholders existed). /login, /signup,
+  and the dashboard topbar are honest UI shells, not fake auth.
+- Grants and Humanitarian workspaces still both call the same generic
+  backend logic in api/agent/route.ts (it ignores the "agent" field).
+  Per your choice, this was left as-is — only the UI was redesigned.
+- No real Projects/backend persistence — the Projects page is an
+  honest empty state, not a working project manager.
+
+VERIFIED
+----------
+[x] npx tsc --noEmit           -> 0 errors
+[x] npx next lint               -> 0 warnings/errors
+[x] npm run build (system-font
+    fallback, to bypass sandbox
+    network restriction)         -> 22 static routes + 1 dynamic API
+                                     route, all compiling clean
