@@ -1,25 +1,80 @@
-## Stitch Instructions
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900">
+      <section className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-20 lg:px-8">
+        <div className="max-w-4xl">
+          <div className="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-600">
+            Nexus Impact AI
+          </div>
 
-Get the images and code for the following Stitch project's screens:
+          <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+            Turn evidence into
+            <span className="block text-slate-600">impactful action.</span>
+          </h1>
 
-## Project
-Title: Nexus Impact AI Interface System
-ID: 3543538299036524703
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+            Nexus Impact AI brings research, grant development, and
+            humanitarian planning into one intelligent workspace for
+            impact organizations.
+          </p>
 
-## Screens:
-1. Design System
-    ID: asset-stub-assets_b583995b43384bf8aa9510dc456bc750
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/research"
+              className="rounded-xl bg-slate-900 px-6 py-3 text-center font-semibold text-white transition hover:bg-slate-800"
+            >
+              Open Research Workspace
+            </a>
 
-2. Nexus Impact AI Logo
-    ID: 059830707d74491f9745cf405eb39744
+            <a
+              href="/grants"
+              className="rounded-xl border border-slate-300 px-6 py-3 text-center font-semibold text-slate-900 transition hover:bg-slate-50"
+            >
+              Grant Workspace
+            </a>
 
-3. Professional headshot avatar of an impact researcher and humanitarian director, warm natural lighting, confident friendly expression, neutral studio background, high quality portrait photography
-    ID: c5ea7352c90c4b79a9cbfb2b6bc14a0e
+            <a
+              href="/humanitarian"
+              className="rounded-xl border border-slate-300 px-6 py-3 text-center font-semibold text-slate-900 transition hover:bg-slate-50"
+            >
+              Humanitarian Workspace
+            </a>
+          </div>
+        </div>
 
-4. Nexus Impact AI — Mobile Dashboard
-    ID: 271375ebded84300a75ae2f875c8a8b5
+        <div className="mt-20 grid gap-6 md:grid-cols-3">
+          <WorkspaceCard
+            title="Research"
+            description="Analyze evidence, summarize documents, and extract actionable findings."
+          />
 
-5. Nexus Impact AI — Enterprise Operations Dashboard & Workspace
-    ID: 1fe7b0843c7349d5941a1d89a46c77d9
+          <WorkspaceCard
+            title="Grants"
+            description="Turn evidence into structured proposals, logframes, and grant content."
+          />
 
-Use a utility like `curl -L` to download the hosted URLs.
+          <WorkspaceCard
+            title="Humanitarian"
+            description="Create needs assessments, situation reports, and response plans."
+          />
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function WorkspaceCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-semibold text-slate-900">{title}</h2>
+
+      <p className="mt-3 leading-7 text-slate-600">{description}</p>
+    </div>
+  );
+}
